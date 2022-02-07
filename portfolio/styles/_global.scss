@@ -9,9 +9,14 @@ Global styles
 html {
     font-size: 62.5%;
 }
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+p {
+    font-size: $text;
+}
 h1 {
-    font-size: var(--header1);
-    font-family: 'vibes', sans-serif;
+    font-size: $header1;
 }
 li,button,label,p,a {
     font-size: $text;
@@ -27,7 +32,7 @@ h4,h5 {
 }
 a {
     text-decoration: none;
-    color: black;
+    color: $gray-text;
 }
 ul {
     list-style: none;
