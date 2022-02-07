@@ -26,7 +26,7 @@ html {
     --header3: calc(3rem + 1vw);
     --header4: calc(2.4rem + 1vw);
     --text: calc(1.5rem + 1vw);
-    --big-text: calc(2.4rem + 1vw);
+    --big-text: calc(6rem + 1vw);
     --special-color: #906272;
     --bkg-color: #414141;
     --grey-txt: #525252;
@@ -180,6 +180,7 @@ nav {
     /*Use translate to remove the size of item and center it*/
     transform: translate(-50%, -20%);
 }
+
 /*Gallery sction*/
 .gallery {
     display: grid;
@@ -211,6 +212,65 @@ nav {
     text-align: center;
 }
 
+/*Contact section*/
+.contact {
+    min-height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+}
+.form-wrapper {
+    flex: 3 1 40rem;
+}
+.form-wrapper span {
+    font-size: var(--big-text);
+    color: var(--special-color);
+}
+.form-wrapper h2 {
+    margin: 5rem 0;
+}
+.form-wrapper label {
+    display: block;
+}
+.form-wrapper input {
+    display: block;
+    margin: 3rem 0rem;
+    background: var(--bkg-color);
+    color: white;
+    border: none;
+    padding: 1rem;
+    width: 100%;
+}
+.form-wrapper button {
+    padding: 1rem 8rem;
+    background: var(--special-color);
+    color: white;
+    border: none;
+    width: 100%;
+}
+.contact-wrapper img {
+    flex: 1 1 40rem;
+}
+
+/*Footer*/
+footer {
+    background: var(--bkg-color);
+    color: white;
+    display: flex;
+    padding: 3rem 5%;
+    align-items: center;
+    flex-wrap: wrap;
+}
+footer h4 {
+    flex: 3 1 40rem;
+    font-size: calc(1.4rem + 1vw);
+}
+footer ul {
+    display: flex;
+    flex: 1 1 40rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
 /*Animations*/
 @keyframes opening {
     from {
@@ -238,6 +298,11 @@ nav {
 }
 
 /*Media queries*/
+@media screen and (max-width: 1100px) {
+    .contact img {
+        display: none;
+    }
+}
 @media screen and (max-width: 842px) {
     .hero {
         width: 100%;
@@ -257,6 +322,14 @@ nav {
     }
     .gallery-header {
         padding: 1rem 2rem;
+    }
+    footer h4 {
+        order: 2;
+        text-align: center;
+        padding: 1rem;
+    }
+    footer ul {
+        order: 1;
     }
     /*Burger section*/
     .burger {
@@ -315,5 +388,16 @@ nav {
     }
     .menu-check:checked ~ .burger span:nth-child(2){
         opacity: 0;
+    }
+}
+
+@media screen and (min-width: 1700px) {
+    html {
+        --header1: 3rem;
+        --header2: 4.5rem;
+        --header3: 3.5rem;
+        --header4: 2.5rem;
+        --text: 3rem;
+        --big-text: 6rem;
     }
 }
