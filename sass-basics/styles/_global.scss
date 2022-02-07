@@ -1,0 +1,20 @@
+/*VARIABLES*/
+$primary: #4f4894;
+$big-font: 4rem;
+/*MIXIN*/
+@mixin flex($dir, $justify) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+    flex-direction: $dir;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+}

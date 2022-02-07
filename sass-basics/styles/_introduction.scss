@@ -1,0 +1,23 @@
+.introduction {
+    /*include a mixin, add params*/
+    @include flex(column, space-around);
+    min-height: 100vh;
+    /*STACKING*/
+    h2 {
+       font-size: $big-font; 
+    }
+    button {
+        border: none;
+        background: $primary;
+        padding: 1rem 3rem;
+        cursor: pointer;
+        transition: all 1s ease;
+        &:hover {
+            background: lightslategray;
+        }
+    }
+    .box {
+        @include flex(column, center);
+        color: lightcoral;
+    }
+}
